@@ -1,0 +1,9 @@
+[submodule "soliddatasaver"]
+	path = solidDataSaver
+	url = git@github.ugent.be:fpsander/soliddatasaver.git
+[submodule "leshan-server-solid"]
+	path = leshan-server-solid
+	url = git@github.ugent.be:tpaelman/Leshan-server-Solid.git
+[submodule "solidDataVisualizer"]
+	path = solidDataVisualizer
+	url = git@github.ugent.be:fpsander/Solid-IoT.git
