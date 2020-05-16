@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function handle_sigint() {
+	for proc in $(jobs -p)
+	do
+		echo "killing $proc"
+		kill $proc
+	done
+}
+
+trap "handle_sigint" SIGINT
+
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2
+
+(echo "subshell1: $$"; cd ~/net-tools/; ./loop-socat.sh) &
+(echo "subshell2: $$"; cd ~/net-tools/; sudo ./loop-slip-tap.sh) &
+gnome-terminal --window-with-profile=gnome -e "python3 eclipse-workspace/SuperGlue/ClientDuctTape.py"
+(echo "subshell3: $$"; cd ~/zephyrproject/zephyr/build/; ~/.local/bin/west build -t run) & # probleem bij het vinden van west -> opgelost.
+
+wait

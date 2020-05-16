@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function handle_sigint() {
+	for proc in $(jobs -p)
+	do
+		echo "killing $proc"
+		kill $proc
+	done
+}
+
+trap "handle_sigint" SIGINT
+
+(echo "subshell1: $$"; python3 ~/SuperGlue2.0/ServerDuctTape.py) &
+# (echo "subshell2: $$";cd ~; java -jar ./leshan-server-solid-1.0.0-jar-with-de$
+
+
+wait
