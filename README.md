@@ -2,7 +2,12 @@
 Project to assemble all repo's partaining to the IoT Solid project with LwM2M for VOP.
 
 Remember, we are using submodules, so after cloning this repository, execute:
-	git submodule update --init --recursive
+```
+	git submodule init
+	git submodule update <name-of-module>
+	# for each submodule, because otherwise you get credentials asked in random order (and through each other)
+```
+	
 
 See subrepositories for details on installation, dependencies, functionality and usage.
 
