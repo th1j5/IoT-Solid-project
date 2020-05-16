@@ -7,3 +7,6 @@
 [submodule "solidDataVisualizer"]
 	path = solidDataVisualizer
 	url = git@github.ugent.be:fpsander/Solid-IoT.git
+[submodule "leshan"]
+	path = leshan
+	url = https://github.com/eclipse/leshan.git
