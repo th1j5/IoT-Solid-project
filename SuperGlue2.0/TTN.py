@@ -1,8 +1,14 @@
 import requests as req
+# aanpassen voor account en toestel
+
+UserName = "TheWifiMaster"
+Password = "VOP2020"
+
+application = 'iot_and_solid'
+device = 'the_stupid_blue_board'
 
 
-
-payload_login = {"username":"TheWifiMaster","password":"VOP2020"}
+payload_login = {"username":UserName,"password":Password}
 
 
 def SimulateUplink(data, login=payload_login):
@@ -16,8 +22,8 @@ def SimulateUplink(data, login=payload_login):
 
     #op voorand gekende urls
     url_login = 'https://account.thethingsnetwork.org/api/v2/users/login'
-    url_uplink = 'https://console.thethingsnetwork.org/api/applications/iot_and_solid/devices/the_stupid_blue_board/uplink'
-
+    #url_uplink = 'https://console.thethingsnetwork.org/api/applications/iot_and_solid/devices/the_stupid_blue_board/uplink'
+    url_uplink = 'https://console.thethingsnetwork.org/api/applications/' + application + '/devices/' + device + '/uplink'
     with req.session() as s:
         # login
         login = s.post(url_login, json=payload_login, headers=header_login)
@@ -47,11 +53,11 @@ def SimulateUplink(data, login=payload_login):
         }
 
         post = s.post(url_uplink, json=data, headers=header_uplink)
+        print(post.status_code)
         if post.status_code == 204:
-            print("data send! %s" % post.status_code)
+            print("data send!")
             s.close()
             return 1
         else:
-            print("data send failed! %s" % post.status_code)
             s.close()
             return 0
