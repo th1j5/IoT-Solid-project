@@ -1,6 +1,9 @@
 # IoT-Solid-project
 Project to assemble all repo's partaining to the IoT Solid project with LwM2M for VOP.
 
+Remember, we are using submodules, so after cloning this repository, execute:
+	git submodule update --init --recursive
+
 See subrepositories for details on installation, dependencies, functionality and usage.
 
 For Leshan there is choice:
