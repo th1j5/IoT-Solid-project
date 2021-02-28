@@ -1,12 +1,12 @@
 [submodule "soliddatasaver"]
 	path = solidDataSaver
-	url = https://github.ugent.be/fpsander/soliddatasaver.git
+	url = https://github.com/th1j5/Solid-data-saver.git
 [submodule "leshan-server-solid"]
 	path = leshan-server-solid
-	url = https://github.ugent.be/tpaelman/Leshan-server-Solid.git
+	url = https://github.com/th1j5/leshan-server-solid.git
 [submodule "solidDataVisualizer"]
 	path = solidDataVisualizer
-	url = https://github.ugent.be/fpsander/Solid-IoT.git
+	url = https://github.com/th1j5/Solid-data-querier.git
 [submodule "leshan"]
 	path = leshan
 	url = https://github.com/eclipse/leshan.git
