@@ -1,0 +1,4 @@
+#!/bin/bash
+
+java -jar ../leshan-server-solid/target/leshan-server-solid-1.0.0-jar-with-dependencies.jar &
+java -jar ../leshan/leshan-client-demo/target/leshan-client-demo-1.0.0-jar-with-dependencies.jar -n sensor1 &

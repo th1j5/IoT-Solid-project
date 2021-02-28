@@ -1,0 +1,35 @@
+#!/bin/bash
+
+function handle_sigint() {
+        for proc in $(jobs -p)
+        do
+		echo "killing $proc"
+                kill $proc
+        done
+	echo "killing java instances $(pgrep java)"
+	pkill java
+}
+
+function kill_descendant_processes() {
+    local pid="$1"
+    local and_self="${2:-false}"
+    echo "handling process $pid"
+    if children="$(pgrep -P "$pid")"; then
+        for child in $children; do
+            echo "found child $child"
+            kill_descendant_processes "$child" true
+        done
+    fi  
+    if [[ "$and_self" == true ]]; then
+        echo "killing process $pid"
+        kill -SIGINT "$pid"
+    fi  
+}
+
+trap "handle_sigint" SIGINT
+
+(echo "subshell1: $$"; ./run-demo) &
+(echo "subshell2: $$"; cd ../solidDataSaver; npm start) &
+
+
+wait
