@@ -1,5 +1,5 @@
 # IoT-Solid-project
-Project to assemble all repo's partaining to the IoT Solid project with LwM2M for VOP.
+Project to assemble all repo's partaining to the IoT Solid project with LwM2M for Cross-Course Project at Ghent University (2019-2020).
 
 Remember, we are using submodules, so after cloning this repository, execute:
 ```
