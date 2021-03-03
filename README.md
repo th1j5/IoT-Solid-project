@@ -1,5 +1,18 @@
 # IoT-Solid-project
+
 Project to assemble all repo's partaining to the IoT Solid project with LwM2M for Cross-Course Project at Ghent University (2019-2020).
+
+---
+
+Thijs Paelman - [thijs.paelman@ugent.be](mailto:thijs.paelman@ugent.be)
+
+Flor Sanders - [flor.sanders@ugent.be](mailto:flor.sanders@ugent.be)
+
+Axl Bomhals - [axl.bomhals@ugent.be](mailto:axl.bomhals@ugent.be)
+
+Kobe Hens - [kobe.hens@ugent.be](mailto:kobe.hens@ugent.be)
+
+---
 
 The complete system is visualized in the network diagram below. The different components can be found in the submodules included in this repository.
 
