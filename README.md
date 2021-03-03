@@ -15,6 +15,7 @@ Kobe Hens - [kobe.hens@ugent.be](mailto:kobe.hens@ugent.be)
 ---
 
 The complete system is visualized in the network diagram below. The different components can be found in the submodules included in this repository.
+All technical details about the system are described in the [report](./report/Report.pdf).
 
 ![proof-of-concept-1](README.assets/proof-of-concept-1.png)
 
